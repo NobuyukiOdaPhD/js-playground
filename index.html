@@ -5,6 +5,15 @@
     <title>js-playground</title>
   </head>
   <body>
-    <h1>JS-Playground</h1>
+    <h1 id="title">JS-Playground</h1>
+    <button id="btn">Push</button>
+    <script>
+      const button = document.querySelector('#btn');
+      const text = document.querySelector('#title');
+
+      button.addEventListener('click', () => {
+        text.textContent = 'JS-Playground Updated!!';
+      });
+    </script>
   </body>
 </html>
