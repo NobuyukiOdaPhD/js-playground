@@ -3,16 +3,41 @@
   <head>
     <meta charset="UTF-8">
     <title>js-playground</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1 id="title">JS-Playground</h1>
+    <p id="counter">回数: 0</p>
     <button id="btn">Push</button>
     <script>
+      let count = 0
+      let isShowOnOff = true;
+
       const button = document.querySelector('#btn');
       const text = document.querySelector('#title');
+      const number = document.querySelector('#counter');
+      const label = document.querySelector('#switch');
 
       button.addEventListener('click', () => {
-        text.textContent = 'JS-Playground Updated!!';
+        text.textContent = 'JS-Playground Updated!!';//テキストの文字の入れ替え
+        text.style.color = '#F52727';//色の変更
+        text.style.backgroundColor = '#3C27F5';// バックグラウンドカラーの変更
+        // 回数カウント
+        count++;
+        number.textContent = '回数: ' + count;
+        //状態の変更
+        if (isShowOnOff) {
+          button.textContent = 'On';
+          isShowOnOff = false;
+        } else {
+          button.textContent = 'Off';
+          isShowOnOff = true;
+        }
+        //特定回数でcssを変更
+        if (count > 4){
+          number.classList.add('newcounter');
+        }
+        
       });
     </script>
   </body>
