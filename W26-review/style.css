@@ -1,0 +1,39 @@
+body {
+  font-family: 'Hiragino Sans', 'メイリオ', sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 24pt;
+}
+
+p {
+  font-size: 16pt;
+}
+
+footer {
+  font-size: 8pt;
+  font-weight: lighter;
+}
+
+.content-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 8pt;
+  margin: 16pt;
+  background-color: #6abde3;
+  border: 4pt dotted #0b0bcdda;
+}
+
+#subtitle {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 4px;
+  margin: 8px;
+  border: 1px solid black;
+  justify-content: left;
+}
